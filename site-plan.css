@@ -1,0 +1,217 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a | */
+@import url('https://fonts.googleapis.com/css?family=Orbitron|Raleway');
+
+:root {
+  /* https://coolors.co/000000-f9f9e9-adad8b-596869-c05746-daa520-259963 */
+  --color-background1: #000000;
+  --color-background2: #1c1c1c;
+  --color-primary: #f9f9e9;
+  --color-secondary: #adad8b;
+  --color-accent1: #596869;
+  --color-accent2: #c05746;
+  --color-accent3: #daa520;
+  --color-accent4: #259963;
+
+  --font-heading: "Orbitron", Times, serif;
+  --font-paragraph: "Raleway", Arial, sans-serif;
+
+}
+
+html {
+  background-color: var(--color-background2);
+}
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color:var(--color-background1);
+  color: var(--color-primary);
+  padding: 1em;
+}
+img {
+  max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+  letter-spacing: 0.1em;
+
+}
+
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+header > h1, header > h2 {
+  color: var(--color-background1);
+}
+
+p {
+  font-family: var(--font-paragraph);
+  color: var(--color-primary);
+  line-height: 1.2em;
+  letter-spacing: 0.03em;
+  margin: 0.7em 1.5em;
+}
+
+hr {
+  color: var(--color-accent4);
+}
+
+.colors {
+  font-family: var(--font-paragraph);
+  width: 100%;
+  min-width: 250px;
+  margin: auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #444;
+}
+.colors td{
+  width: 13.3%;
+  height: 3em;
+}
+
+.bkg1 {
+  background-color: var(--color-background1);
+}
+.bkg2 {
+  background-color: var(--color-background2);
+}
+.primary {
+  background-color: var(--color-primary);
+  color: black;
+}
+.secondary {
+  background-color: var(--color-secondary);
+  color: black;
+}
+.accent1 {
+  background-color: var(--color-accent1);
+}
+.accent2 {
+  background-color: var(--color-accent2);
+}
+.accent3 {
+  background-color: var(--color-accent3);
+}
+.accent4 {
+  background-color: var(--color-accent4);
+}
+
+.naked {
+  list-style-type: none;
+}
+
+.strong {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: var(--color-accent4);
+}
+
+.address {
+  font-size: 0.85em;
+}
+
+p.colored {
+  background-color: var(--color-secondary);
+  color: var(--color-background1);
+  padding: 1em;
+}
+
+p.sub-strong {
+  font-weight: bold;
+  margin-bottom: -0.5em;
+  margin-left: 0.5em;;
+}
+
+a {
+  color: var(--color-accent2);  
+}
+
+a:visited {
+  color: var(--color-accent1);
+}
+
+li a {
+  text-decoration: none;
+}
+
+nav {
+  line-height: 1em;
+  text-align: center;
+  font-size: 1.2em;
+}
+nav > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav a {
+  padding:1em;
+  min-width: 70px;
+  text-decoration: none;
+}
+
+nav a:link, nav a:visited {
+  color: var(--color-accent3);
+}
+nav a:hover {
+  color: var(--color-background2);
+  background-color: var(--color-accent3);
+}
+
+.sitemap {
+  font-family: var(--font-paragraph);
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(6, 10%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas:
+    ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
+
+.sitemap > div {
+  text-align: center;
+}
+
+.sm-home {
+  grid-area: home;
+  background-color:var(--color-accent1);
+  line-height: 3em;
+}
+.sm-page2 {
+  grid-area: page2;
+  background-color: var(--color-accent1);
+  line-height: 3em;
+}
+.sm-page3 {
+  grid-area: page3;
+  background-color: var(--color-accent1);
+  line-height: 3em;
+}
+
+.top {
+  grid-area: top;
+  border-left: 1px solid;
+}
+
+.left {
+  grid-area: left;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.right {
+  grid-area: right;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
